@@ -1,4 +1,7 @@
 Task6::Application.routes.draw do
+  devise_for :users
+
+  root :to => "playlists#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
