@@ -8,10 +8,16 @@ gem "will_paginate", "~> 3.0.pre2"
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0.1"
+  gem "autotest"
+  gem 'gherkin'
+  gem "cucumber", ">=0.9.2"
+  gem "cucumber-rails"
+  gem "capybara"
+  gem "webrat"
+  gem "factory_girl"
 end
 
-gem "autotest"
-gem "capybara"
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

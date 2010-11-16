@@ -1,0 +1,10 @@
+%p= link_to "Utwórz", new_playlist_path
+%p= link_to "Wyszukaj", search_playlists_path
+
+
+- @playlists.each do |playlist|
+    = render :partial => "list", :locals => {:playlist => playlist}
+
+
+= will_paginate @playlists    
+%hr

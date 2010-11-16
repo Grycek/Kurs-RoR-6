@@ -1,0 +1,19 @@
+= f.error_messages
+%p
+    Nazwa
+    %br
+    = f.text_field :name
+    %br
+    Autor
+    %br
+    = f.text_field :author
+    %br
+    Playlista
+    %br
+    = f.text_area :list
+    %br
+    Data
+    %br
+    = f.date_select :date
+  
+%p=f.submit "Dodaj"

@@ -1,0 +1,15 @@
+%p= link_to "Powrót", playlists_path
+
+- @playlists.each do |playlist|
+  = render :partial => "list", :locals => {:playlist => playlist}
+
+
+%hr
+
+= form_for :search, :as => @search, :html => {:method => :get} do |f|
+  %p
+    = f.label :list_contains
+    = f.text_field :list_contains
+    =# f.label :comments_created_at_greater_than, 'With comments after'
+    =# f.datetime_select :comments_created_at_greater_than, :include_blank => true %><br />
+    = f.submit 
