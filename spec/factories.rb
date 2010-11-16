@@ -1,6 +1,12 @@
 Factory.define :user do |f|
-  f.squence(:username) {|n| "foo#{n}"}
+  #f.sequence(:username) {|n| "foo#{n}"}
   f.password "foobar"
   f.password_confirmation {|u| u.password}
-  f.squence(:email) {|n| "foo#{n}@foo.com"}
+  f.sequence(:email) {|n| "foo#{n}@foo.com"}
+end
+
+
+Factory.define :playlist do |f|
+  f.name "Foo"
+  f.association :user_id , :factory => :user
 end
